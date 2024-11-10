@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Log In</title>
+        <link rel="stylesheet" href="login.css" />
+    </head>
+    <body>
+        <div class="hero">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle-btn" onclick="signup()">
+                        Reset
+                    </button>
+                    <button type="button" class="toggle-btn" onclick="login()">
+                        Sign Up
+                    </button>
+                </div>
+                <form
+                    id="login"
+                    class="input-group"
+                    action="forget.php"
+                    method="post"
+                >
+                    <input
+                        type="text"
+                        class="input-field"
+                        placeholder="UserID"
+                        name="UserID"
+                        required
+                    />
+                    <input
+                        type="password"
+                        class="input-field"
+                        placeholder="Password"
+                        name="Password"
+                        required
+                    />
+                    <div>
+                        <br />
+                        <br />
+                    </div>
+
+                    <button type="submit" class="submit-btn" value="login">
+                        Update
+                    </button>
+                </form>
+                <form
+                    id="signup"
+                    class="input-group"
+                    action="signup.php"
+                    method="post"
+                >
+                    <input
+                        type="text"
+                        class="input-field"
+                        placeholder="UserID"
+                        name="UserID"
+                        required
+                    />
+                    <input
+                        type="text"
+                        class="input-field"
+                        placeholder="NID"
+                        name="NID"
+                        required
+                    />
+                    <input
+                        type="text"
+                        class="input-field"
+                        placeholder="Phone no"
+                        name="Phone"
+                        required
+                    />
+                    <input
+                        type="text"
+                        class="input-field"
+                        placeholder="Name"
+                        name="Name"
+                        required
+                    />
+                    <input
+                        type="password"
+                        class="input-field"
+                        placeholder="Password"
+                        name="Password"
+                        required
+                    />
+                    <br /><br />
+                    <button type="submit" name="submit" class="submit-btn">
+                        Sign up
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            var x = document.getElementById("login");
+            var y = document.getElementById("signup");
+            var z = document.getElementById("btn");
+
+            function login() {
+                x.style.left = "-400px";
+                y.style.left = "50px";
+                z.style.left = "110px";
+            }
+            function signup() {
+                x.style.left = "50px";
+                y.style.left = "450px";
+                z.style.left = "0px";
+            }
+        </script>
+        <script>
+            window.onload = function () {
+                var urlParams = new URLSearchParams(window.location.search);
+                if (urlParams.has("error")) {
+                    alert("Please give correct informations");
+                }
+            };
+        </script>
+    </body>
+</html>
