@@ -74,5 +74,5 @@ The Bus E-Ticketing System is designed to enhance the bus booking experience, of
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](https://github.com/AnindyaMajumder/Bus-e-ticketing-System/blob/main/LICENSE).
 
